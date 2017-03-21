@@ -14,7 +14,7 @@ body
     position:absolute; top:0; bottom:0; right:0; left:0;
     background-color: #232323;
     color: #FFF;
-    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Title */
@@ -101,9 +101,66 @@ body
 /* Base Frames */
 .login-frame
 {
+    background-image: url("https://static.pexels.com/photos/23049/pexels-photo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     display:none;
     width: 100%;
     height:100%;
+}
+
+.login-holder
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius:5px;
+    transform: translate(-50%,-50%);    
+    backdrop-filter: blur(48px);
+    width:250px;
+    
+    padding:15px;
+}
+
+.login-holder h2
+{
+    font-weight: 300;
+    text-align: center;
+    margin:0;
+}
+
+.login-holder label {
+    display:block;
+    margin-top:15px;
+    margin-bottom:5px;
+    opacity: 0.8;
+}
+
+.login-holder input[type = text]
+{
+    display:block;
+    margin:0;
+    border:0;
+    width:calc(100% - 20px);
+    background-color: #444;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.16);
+    color: #EEE;
+    border-radius:3px;
+    padding:10px;
+}
+
+.login-holder input[type = button]
+{
+    display:block;
+    margin:0;
+    border:0;
+    width:100%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-radius:3px;
+    padding:10px;
+    margin-top:20px;
+    background-color: darkred;
+    color: #FFF;
 }
 
 .app-frame
@@ -116,6 +173,7 @@ body
 }
 
 .noselect {
+    cursor:default;
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */

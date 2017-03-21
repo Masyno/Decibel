@@ -3,8 +3,11 @@
   "version": "0.0.1",
   "main": "main.js",
   "dependencies": {
-    "electron": "^1.6.2",
+    "electron": "^1.6.3",
     "jquery": "^3.2.0",
     "ws": "^2.2.1"
+  },
+  "devDependencies": {
+    "electron-rebuild": "^1.5.7"
   }
 }

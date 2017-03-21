@@ -8,7 +8,18 @@ let win
 
 function createWindow () {
   // Create the browser window.
-  win = new BrowserWindow({width: 1280, height: 720, frame : false, title : "Decibel"})
+  win = new BrowserWindow({
+    width: 1280, 
+    height: 720, 
+    frame : false, 
+    title : "Decibel",
+    titleBarStyle: 'hidden',
+    backgroundColor: '#232323',
+    show: false,
+    webPreferences: {
+      experimentalFeatures: true
+    }
+  })
 
   // and load the index.html of the app.
   win.loadURL(url.format({
@@ -16,6 +27,10 @@ function createWindow () {
     protocol: 'file:',
     slashes: true
   }));
+
+ win.once('ready-to-show', () => {
+     win.show()
+ })
 
   // Emitted when the window is closed.
   win.on('closed', () => {
