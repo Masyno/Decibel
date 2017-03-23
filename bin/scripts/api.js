@@ -14,9 +14,12 @@ $(function() {
 
         ws = new WebSocket('ws://'+ip+':'+port+'');
 
+        $(".main-loader").hide().velocity("fadeIn", { duration: 150 });
+
         ws.on("error", function() 
         {
             remote.dialog.showErrorBox("Server Connection Failed", "Could not connect to the server at: " + ip + ":" +  port);
+            $(".main-loader").velocity("fadeOut", { duration: 150 });
         });
 
 
@@ -24,6 +27,9 @@ $(function() {
         {
             // After we have opened the server we need to perform some validation logic.
             // In the future we might see how to incoperate protobuf into this.
+
+                        $(".main-loader").velocity("fadeOut", { duration: 150 });
+
 
             ws.send('proto-version:0.0.1');
 
@@ -49,6 +55,7 @@ $(function() {
     SetupTitlebarHandles();
   
 });
+
 
 
 function SetupTitlebarHandles()

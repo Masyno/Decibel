@@ -23,8 +23,8 @@ body
     position:fixed;
     -webkit-app-region: drag;
     width:100%;
-    height:40px;
-    background-color: #353535;
+    height:34px;
+    background-color: #00796b;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
@@ -50,11 +50,16 @@ body
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   opacity: 0.5;
-  margin:10px 5px;
+  padding: 7px;
 }
+
+#close-btn:hover
+{
+    background-color: rgba(0,0,0,0.4);
+} 
 
 #max-btn 
 {
@@ -101,10 +106,31 @@ body
 /* Base Frames */
 .login-frame
 {
-    background-image: url("https://static.pexels.com/photos/23049/pexels-photo.jpg");
+    background-image: url("../assets/default_bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     display:none;
+    width: 100%;
+    height:100%;
+}
+
+.main-loader
+{
+    display:none;
+    opacity: 0;
+    width: 100%;
+    height:100%;
+    z-index: 500;
+    position: absolute;
+    background-color: rgba(0,0,0,0.75);
+    top:0; left:0; bottom:0; right:0;
+}
+
+.bg-blur
+{
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top:0; left:0; bottom:0; right:0;
     width: 100%;
     height:100%;
 }
@@ -116,7 +142,10 @@ body
     top: 50%;
     border-radius:5px;
     transform: translate(-50%,-50%);    
-    backdrop-filter: blur(48px);
+      background-color: rgba(30,30,30,0.98);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+
     width:250px;
     
     padding:15px;
@@ -159,7 +188,7 @@ body
     border-radius:3px;
     padding:10px;
     margin-top:20px;
-    background-color: darkred;
+    background-color: #00796b;
     color: #FFF;
 }
 
@@ -181,4 +210,55 @@ body
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
+}
+
+
+
+/* LOADER */
+.cssload-container {
+	width: 100%;
+	height: 49px;
+	text-align: center;
+      position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+     z-index: 520;
+}
+
+.cssload-zenith {
+	width: 49px;
+	height: 49px;
+	margin: 0 auto;
+	border-radius: 50%;
+	border-top-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	box-shadow: 3px 3px 1px rgb(255,255,255);
+	animation: cssload-spin 690ms infinite linear;
+		-o-animation: cssload-spin 690ms infinite linear;
+		-ms-animation: cssload-spin 690ms infinite linear;
+		-webkit-animation: cssload-spin 690ms infinite linear;
+		-moz-animation: cssload-spin 690ms infinite linear;
+}
+
+
+
+@keyframes cssload-spin {
+	100%{ transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-o-keyframes cssload-spin {
+	100%{ -o-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-ms-keyframes cssload-spin {
+	100%{ -ms-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-webkit-keyframes cssload-spin {
+	100%{ -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-moz-keyframes cssload-spin {
+	100%{ -moz-transform: rotate(360deg); transform: rotate(360deg); }
 }
