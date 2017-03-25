@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Titlebar from './components/Titlebar'
-import Velocity from './velocity.min'
+import Velocity from './scripts/velocity.min'
 
 class App extends React.Component {
   render () {
