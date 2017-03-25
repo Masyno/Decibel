@@ -44,5 +44,9 @@ root
 | `src/[components]` | Individual components used by the react framework.
 | `src/[scripts]`    | All individual scripts used in the app.
 | `src/[styles]`     | All individual styles used in the app.
-| `src/style.css`     | All individual styles used in the app.
-| `src/app.js`     | All individual styles used in the app.
+| `src/style.css`    | Main style source file.
+| `src/app.js`       | Main script source file.
+
+## Framework
+
+Decibel is build using Node.JS. It uses electron to manage the window, and uses react to render the page. Voice is transmitted using UDP and general messages are transmitted using websockets.
