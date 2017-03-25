@@ -31,4 +31,12 @@ root
 
 | File / Folder Name | Description
 | ------------------ |:--:
-| main.js            | Main starting point for the app, creates window etc.
+| `main.js`          | Main starting point for the app, creates window etc.
+| `package.json`     | Used by nmp to install packages that we need. Use `npm install` to install the packages.
+| webpack.config.js  | Used by nmp to bundle our scripts into a single file. Use `npm run dev` to generate the files.
+| `[bin]`            | Stores all the compiled items that the running app will use.
+| `bin/[assets]`     | Contains images, sounds and fonts used by the app.
+| `bin/app-style.css`| The complied and minified css code for the app.
+| `bin/app-bundle.js`| The complied and minified javascript code for the app.
+| `bin/app.html`     | Main html entry point used by Node.js.
+| `[src]`            | Contains raw source files.
