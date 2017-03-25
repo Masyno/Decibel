@@ -1,17 +1,30 @@
-const {app, BrowserWindow} = require('electron');
-const path = require('path');
-const url = require('url');
+const {app, BrowserWindow} = require('electron')
+const path = require('path')
+const url = require('url')
+const Config =  require('electron-config')
+require('electron-reload')(__dirname)
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
-let win;
+let win
+
+const AppConfig = new Config({
+  defaults: {
+    // 1280x720 is the default size of our window
+    windowBounds: { width: 1280, height: 720 }
+  }
+});
+
+console.log(AppConfig.path);
 
 function createWindow () 
 {
+  let { width, height } = AppConfig.get("windowBounds");
+
   // Create the browser window.
   win = new BrowserWindow({
-    width: 1280, 
-    height: 720, 
+    width: width, 
+    height: height, 
     frame : false, 
     title : "Decibel",
     titleBarStyle: 'hidden',
@@ -32,6 +45,12 @@ function createWindow ()
  win.once('ready-to-show', () => {
      win.show();
  });
+
+  win.on('resize', () => {
+    let { width, height } = win.getBounds();
+
+    AppConfig.set("windowBounds", { width, height});
+  });
 
   // Emitted when the window is closed.
   win.on('closed', () => {

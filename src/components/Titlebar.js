@@ -50,7 +50,6 @@ export default class Titlebar extends React.Component
     {
         return (
             <div className="title noselect">
-                <h1>Decibel - Voice Communications App</h1>
                 <div className="menu-icons">
                     <div id="min-btn" onClick={this.minWindow}></div>
                     <div id="max-btn" onClick={this.maxWindow}></div>

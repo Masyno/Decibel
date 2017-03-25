@@ -16,7 +16,7 @@
                 "--enable-logging"
             ],
             "env": {},
-            "console": "internalConsole",
+            "console": "externalTerminal",
             "sourceMaps": false,
             "outDir": null
         },
