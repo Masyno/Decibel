@@ -9,37 +9,7 @@
     <link rel="stylesheet" href="./styles/main.css">
   </head>
   <body>
-    <div class="title noselect">
-      <h1>Decibel - Voice Communications App</h1>
-      <div class="menu-icons">
-        <div id="min-btn"></div>
-         <div id="max-btn"></div>
-        <div id="close-btn"></div>
-      </div>
-    </div>
-
-    <div class="login-frame noselect">
-      <div class="login-holder">
-          <h2>CONNECT</h2>
-
-          <label>Server Address</label>
-          <input id="login-address" type="text" />
-
-          <label>Server Port</label>
-          <input id="login-port" type="text" placeholder="44044" />
-
-          <label>Username</label>
-          <input id="login-username" type="text" />
-        
-          <input type="button" id="login-button" value="Login" />
-      </div>
-
-      <span style="text-align:center; position:absolute; bottom:10px; left:0; right:0; font-size: 12px; opacity: 0.8;">Note: Confidential, UI style and app quality may not represent the final program.</span>
-
-    </div>
-
-    <div class="app-frame">
-    </div>
+    <div id="app"></div>
 
     <div class="main-loader">
       <div class="bg-blur"></div>
@@ -51,6 +21,6 @@
 
     <script>window.$ = window.jQuery = require('jquery');</script>
     <script src="./scripts/velocity.min.js"></script>
-    <script src="./scripts/api.js"></script>
+    <script src="app-bundle.js"></script>
   </body>
 </html>
