@@ -35,3 +35,7 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+# Compiled javascript and css
+bin/app-bundle.js
+bin/app-style.css
