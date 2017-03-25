@@ -9,6 +9,7 @@
     "build-css": "node-sass --include-path scss src/style.scss bin/app-style.css --output-style compressed",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
     "build-all": "concurrently \"npm run build-css\" \"npm run build-js\"",
+    "watch-all": "concurrently \"npm run watch-css\" \"npm run watch-js\"",
     "start": "electron ."
   },
   "author": "Dominic Maas",
