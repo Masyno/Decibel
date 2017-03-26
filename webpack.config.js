@@ -17,8 +17,8 @@ module.exports={
         }
       }
     ]
-  }
- /* plugins: [
+  },
+  plugins: [
     new UglifyJSPlugin()
-  ]*/
+  ]
 }
