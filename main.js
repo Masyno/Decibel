@@ -1,12 +1,12 @@
-const {app, BrowserWindow} = require('electron')
-const path = require('path')
-const url = require('url')
-const Config =  require('electron-config')
-require('electron-reload')(__dirname)
+const {app, BrowserWindow} = require('electron');
+const path = require('path');
+const url = require('url');
+const Config =  require('electron-config');
+require('electron-reload')(__dirname);
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
-let win
+let win;
 
 const AppConfig = new Config({
   defaults: {
@@ -46,9 +46,11 @@ function createWindow ()
      win.show();
  });
 
+  // This is used to save the window resize state
+  // so when the user opens the app again, the
+  // window will be on last resize.
   win.on('resize', () => {
     let { width, height } = win.getBounds();
-
     AppConfig.set("windowBounds", { width, height});
   });
 
